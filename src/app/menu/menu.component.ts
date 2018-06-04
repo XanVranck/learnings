@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatButtonToggleGroup } from '@angular/material';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -11,7 +12,7 @@ export class MenuComponent implements OnInit {
   @ViewChild(MatButtonToggleGroup)
   public toggleGroup: MatButtonToggleGroup;
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }
@@ -19,5 +20,9 @@ export class MenuComponent implements OnInit {
 
   unselectToggleGroup() {
     this.toggleGroup.value = null;
+  }
+
+  navigateTo(url:String) {
+    this.router.navigateByUrl('/' + url)
   }
 }

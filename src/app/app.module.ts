@@ -8,12 +8,14 @@ import { MenuComponent } from './menu/menu.component';
 import { AppRoutingModule } from './routing/app-routing.module';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { AngularComponent } from './angular/angular.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    HomeComponent
+    HomeComponent,
+    AngularComponent
   ],
   imports: [
     BrowserModule,

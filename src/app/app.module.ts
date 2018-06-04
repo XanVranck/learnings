@@ -5,11 +5,14 @@ import { MatToolbarModule, MatMenuModule, MatButtonToggleModule, MatIconModule }
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { AppRoutingModule } from './routing/app-routing.module';
+import { RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent
+    MenuComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -17,7 +20,9 @@ import { AppRoutingModule } from './routing/app-routing.module';
     MatToolbarModule,
     MatMenuModule,
     MatButtonToggleModule, 
-    MatIconModule, AppRoutingModule
+    MatIconModule, 
+    AppRoutingModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

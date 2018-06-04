@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MenuComponent } from './menu/menu.component'
+import { AppRoutingModule } from './routing/app-routing.module'
 
 @Component({
   selector: 'app-root',

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatButtonToggleGroup } from '@angular/material';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+  @ViewChild(MatButtonToggleGroup)
+  public toggleGroup: MatButtonToggleGroup;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+
+  unselectToggleGroup() {
+    this.toggleGroup.value = null;
+  }
 }

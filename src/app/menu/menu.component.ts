@@ -21,8 +21,4 @@ export class MenuComponent implements OnInit {
   unselectToggleGroup() {
     this.toggleGroup.value = null;
   }
-
-  navigateTo(url:String) {
-    this.router.navigateByUrl('/' + url)
-  }
 }

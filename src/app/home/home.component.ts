@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   tiles = [
-    {id: 0, text: 'Angular', cols: 1, rows: 1, color: '#4052AF', summary:'I started out doing some angular projects on my own and noticed I missed some basic info'},
-    {id: 1, text: 'Design patterns', cols: 1, rows: 1, color: '#bf0f3e', summary:'Design patterns are fun, but still hard to graps for me'},
-    {id: 2, text: 'Clean code', cols: 1, rows: 1, color: '#077c15', summary:'So what is a good definition of clean code, I don\'t get it'},
+    {id: 0, text: 'Angular', cols: 1, rows: 1, color: '#E0E0E0', summary:'I started out doing some angular projects on my own and noticed I missed some basic info'},
+    {id: 1, text: 'Design patterns', cols: 1, rows: 1, color: '#E0E0E0', summary:'Design patterns are fun, but still hard to graps for me'},
+    {id: 2, text: 'Clean code', cols: 1, rows: 1, color: '#E0E0E0', summary:'So what is a good definition of clean code, I don\'t get it'},
   ];
 
   constructor() {}

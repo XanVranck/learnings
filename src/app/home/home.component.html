@@ -1,9 +1,12 @@
-<h1>Hi there</h1>
-
-<p>Welcome to the learning site of Xan</p>
-<p>At this moment I want to learn some more about:</p> 
-<ul>
-  <li>Angular</li>
-  <li>Design patterns</li>
-  <li>Clean code</li>
-</ul>
+<p>Click on the tiles to look for the 'why' I learned more about stuff</p>
+<mat-grid-list cols="3" rowHeight="100px" class="card-style">
+    <mat-grid-tile
+       matTooltip="Click on me to learn about the 'why'"
+        *ngFor="let tile of tiles"
+        [colspan]="tile.cols"
+        [rowspan]="tile.rows"
+        [style.background]="tile.color" 
+        (click)="changeSummaryAndText(tile.id)">
+      <p class="p-style">{{tile.text}}</p>
+    </mat-grid-tile>
+  </mat-grid-list>

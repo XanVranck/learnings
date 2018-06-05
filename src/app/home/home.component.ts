@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  tiles = [
+    {id: 0, text: 'Angular', cols: 1, rows: 1, color: 'lightblue', summary:'I started out doing some angular projects on my own and noticed I missed some basic info'},
+    {id: 1, text: 'Design patterns', cols: 1, rows: 1, color: 'lightgreen', summary:'Design patterns are fun, but still hard to graps for me'},
+    {id: 2, text: 'Clean code', cols: 1, rows: 1, color: '#DDBDF1', summary:'So what is a good definition of clean code, I don\'t get it'},
+  ];
+
+  constructor() {}
 
   ngOnInit() {
   }
 
+  changeSummaryAndText(id: number) {
+    const oldValue = this.tiles[id].text
+    this.tiles[id].text = this.tiles[id].summary
+    this.tiles[id].summary = oldValue
+  }
 }

@@ -1,4 +1,9 @@
 .card-style {
     padding: 25px;
     margin-top: 40px;
+    cursor: pointer;
+}
+
+.p-style{
+    padding: 10px;
 }

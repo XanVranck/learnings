@@ -9,16 +9,8 @@ import { Router } from '@angular/router';
 })
 export class MenuComponent implements OnInit {
 
-  @ViewChild(MatButtonToggleGroup)
-  public toggleGroup: MatButtonToggleGroup;
-
   constructor(private router:Router) { }
 
   ngOnInit() {
-  }
-
-
-  unselectToggleGroup() {
-    this.toggleGroup.value = null;
   }
 }

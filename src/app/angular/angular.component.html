@@ -1,3 +1,38 @@
-<p>
-  angular works!
-</p>
+<mat-tab-group class="demo-tab-group">
+    <mat-tab label="Table of contents">
+      <div class="demo-tab-content">
+       
+      </div>
+    </mat-tab>
+    <mat-tab label="Content">
+      <div class="demo-tab-content">
+        <p style="font-size: 12px;">For a full documentation about Angular, please click <a target='_blank' href="https://angular.io/docs">here</a></p>
+          <h1>1. Architecture</h1>
+          <h2>1.1 Overview</h2>
+          <ul>
+            <li>
+              <u>NgModules</u>
+              <p>The main building blocks of an Angular project are <i>NgModules</i>. NgModules collects related code in functional blocks, 
+                it is a container for cohesive block of codes, a workflow, ... . A Module can contain Components, service providers and other code files.</p>
+              <p>A Module can export his own functionality for others to use and can import other modules for their functionality.</p>
+              <p>An App always has at least one root module the enables bootstrap.</p>
+            </li>
+            <li>
+              <u>Components</u>
+              <p>Components define views. Set of screen elements that can be renderend on behalf of your programs logic and data.
+                A component can render and change the DOM (Document Object Model).
+              </p>
+            </li>
+            <li>
+              <u>Services</u>
+              <p>Services provide functionality that a view does not need to know. Services are injected into Components as dependencies.</p>
+            </li>
+          </ul>
+
+        <br/>
+        <br/>
+          <img src='../../assets/Angular .png'>
+          <p style="font-size: 12px;">Image 1: This is an overview how everything in Angular connects</p>
+      </div>  
+    </mat-tab>
+  </mat-tab-group>

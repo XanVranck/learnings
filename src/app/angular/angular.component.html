@@ -1,38 +1,99 @@
 <mat-tab-group class="demo-tab-group">
     <mat-tab label="Table of contents">
-      <div class="demo-tab-content">
-       
-      </div>
-    </mat-tab>
+        <div class="demo-tab-content">
+            <h1>1. Architecture</h1>
+            <h2>1.1 Overview</h2>
+            <h3>1.1.1 NgModules</h3>
+            <h3>1.1.2 Components</h3>
+            <h3>1.1.3 Services</h3>
+        </div>
+      </mat-tab>
     <mat-tab label="Content">
       <div class="demo-tab-content">
-        <p style="font-size: 12px;">For a full documentation about Angular, please click <a target='_blank' href="https://angular.io/docs">here</a></p>
+        <p class="note">For a full documentation about Angular, please click <a target='_blank' href="https://angular.io/docs">here</a></p>
           <h1>1. Architecture</h1>
           <h2>1.1 Overview</h2>
           <ul>
+
             <li>
-              <u>NgModules</u>
+              <u>1.1.1 NgModules</u>
               <p>The main building blocks of an Angular project are <i>NgModules</i>. NgModules collects related code in functional blocks, 
-                it is a container for cohesive block of codes, a workflow, ... . A Module can contain Components, service providers and other code files.</p>
-              <p>A Module can export his own functionality for others to use and can import other modules for their functionality.</p>
-              <p>An App always has at least one root module the enables bootstrap.</p>
+                it is a container for cohesive block of codes, a workflow, ... . A Module can contain Components, service providers and other code files.
+              A Module can export his own functionality for others to use and can import other modules for their functionality.</p>
+              <p>An App always has at least one root module the enables bootstrap. The root module always has a root component, 
+                but can have more additional components, which can be loaded through te router. Components in a module share a compilation context.</p>
+              <img src="../../assets/angular/compilation-context.png">
+              <p class="note">Image 1: A module with his components in their compilation context</p>
+              <p>A component and its HTML-template define a view. A view hierarchy can mix views defined in components of 
+                other modules</p>
+              <img src="../../assets/angular/view-hierarchy.png">
+              <p class="note">Image 2: A view hierarchy</p>
             </li>
+
             <li>
-              <u>Components</u>
+              <u>1.1.2 Components</u>
               <p>Components define views. Set of screen elements that can be renderend on behalf of your programs logic and data.
-                A component can render and change the DOM (Document Object Model).
+                A component can render and change the DOM (Document Object Model). You can decorate a class with @Component. It is not 
+                a compnent untill you defined it with the @Component              
               </p>
+              <p>
+                You define a view with its HTML template. The template will tell Angular how to render the page. 
+              </p>
+              <img src="../../assets/angular/component-tree.png">
+              <p class="note">Image 3: A component with its sub-components</p>
+              <u>
+                Some angular syntax
+              </u>
+                <br/>
+                <br/>
+                <ul>
+                  <li>*ngFor - to loop over a list</li>
+                  <li>curly brackets, (click), and [] bind program data to and from the DOM, responding to user input.</li>
+                  <li>a component tag in the example is an element that represents a new component, 
+                    HeroDetailComponent. The HeroDetailComponent (code not shown) is a child component of the HeroListComponent 
+                    that defines the Hero-detail view. Notice how custom components like this mix seamlessly with native HTML in the same layouts.</li>
+                </ul>
             </li>
+            <br/>
+            <br/>
+            <u>
+              Data binding
+            </u>
+            <br/>
+            <br/>
+            <p>For manipulating data in the DOM, Angular supports one-way-bind and two-way-binding. No need for more explantion, 
+              just look at the image beneath.
+            </p>
+            <img src='../../assets/angular/databinding.png'>
+            <p class="note">Image 4: Databinding</p>
+
             <li>
-              <u>Services</u>
-              <p>Services provide functionality that a view does not need to know. Services are injected into Components as dependencies.</p>
+              <u>1.1.3 Services</u>
             </li>
+            <p>
+                Services provide functionality that a view does not need to know. Services are injected into Components as dependencies.
+                While a component just need to have data, it does not need to know where to fetch the data. This is why services are made.
+              </p>
+              <u>
+                Dependency injection
+              </u>
+              <p>
+                Components consumes services. You can inject services into components. You can do this through the <i>@Injectable</i> on a class.
+                In the constructor of the component you can pass you service and the angular framework will inject this for you.
+                constructor(private service: HeroService). If you injector already has a instance of that service, it will inject that instance,
+                otherwise it will create a new instance.
+              </p>
           </ul>
 
         <br/>
         <br/>
-          <img src='../../assets/Angular .png'>
-          <p style="font-size: 12px;">Image 1: This is an overview how everything in Angular connects</p>
+          <img src='../../assets/angular/Angular.png'>
+          <p class="note">Image 1: This is an overview how everything in Angular connects</p>
       </div>  
     </mat-tab>
+    <mat-tab label="Findings">
+        <div class="demo-tab-content">
+         
+        </div>
+      </mat-tab>
   </mat-tab-group>
